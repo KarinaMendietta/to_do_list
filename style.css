@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-family: 'Arima', cursive;
+    background-color: #feddfa;
+}
+
+.header{
+
+}
+
+.navbar_flex_container {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;  
+    justify-content: space-around;
+    height: 10vh;
+
+
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+    font-style:oblique;
+    
+}

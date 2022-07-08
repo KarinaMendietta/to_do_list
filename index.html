@@ -7,45 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
 
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" ></script>
-    
+    <script src="script.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
-    <div class="fecha">
+    <div class="date">
 
         <div class="fecha_izquierda">
-            <span class="dia_numero">
-                dia
+            <span id="dia_numero">
+            </span>            
+            <span id="mes">                
             </span>
-            <span class="mes">
-                hora
+            <span id="año">                
             </span>
-            <span class="año">
-                año
-            </span>
+        </div>
+        <div class="fecha_centro">
+            <span id="hora"></span>
         </div>
         <div class="fecha_derecha">
-            <span class="dia_letra">
-                dia
+            <span id="dia_texto">                
             </span>
 
         </div>
 
     </div>
-    <div class="container">        
-            <h1> Lista de tareas </h1>
-        
-    </div>
-    <section>
-        <div>
+    <section class="container">
+        <h1> Lista de tareas </h1>
 
-        </div>
+
+        <form onsubmit="addNewTask(event)">
+            <input type="text" name="nueva_tarea" autocomplete="off" placeholder="Nueva tarea">
+            <button type="submit" class="boton_añadir_tarea">+</button>
+            <button type="button" class="boton_ordenar_tareas" onclick="ordenar_tareas()">Ordenar</button>
+
+        </form>
+        <div id="contenedor_tareas"></div>
     </section>
 
 

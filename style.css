@@ -1,32 +1,58 @@
+:root {
+    --primary: #feddfa;
+    --secundary: #f1ddfe;
+    --light: white;
+    --dark: black;
+    --disabled: #d8d8d8;
+}
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: 'Arima', cursive;
-    background-color: #feddfa;
+  font-family: "Arima", cursive;
+  background-color: var(--secundary);
+  height: 100vh;
 }
 
+*:first-letter {
+    text-transform: capitalize;
+}
 
+.date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 5vh;
+  margin: 3vh;
+  background-color: var(--primary);
 
-.fecha {
-    display: flex;
-    flex-direction: row;    
-    align-items: center;  
-    justify-content: space-around;
-    height: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  font-style: oblique;
+  background-color: var(--primary);
+  margin: 10vh;
+
+}
+
+#dia_texto {
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
 
 
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: large;
-    font-style:oblique;
-    
+.boton_añadir_tarea {
+  width: 10%;
+  border-radius: 100%;
+  font-size: 18px;
+
 }
-
-

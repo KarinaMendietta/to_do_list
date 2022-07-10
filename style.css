@@ -1,16 +1,15 @@
 :root {
-    --primary: #feddfa;
-    --secundary: #f1ddfe;
+    --primary: #FBDA61; 
+    --secundary: background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+    ;
     --light: white;
     --dark: black;
     --disabled: #d8d8d8;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
 
 body {
+  margin: 0;
   font-family: "Arima", cursive;
   background-color: var(--secundary);
   height: 100vh;
@@ -27,8 +26,6 @@ body {
   justify-content: space-around;
   height: 5vh;
   margin: 3vh;
-  background-color: var(--primary);
-
 }
 
 .container {
@@ -37,10 +34,19 @@ body {
   align-items: center;
   font-size: large;
   font-style: oblique;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 7vh;
   background-color: var(--primary);
-  margin: 10vh;
 
 }
+
+.container h1 {
+  color: white;
+  font-size: xx-large
+}
+
 
 #dia_texto {
     letter-spacing: 3px;
@@ -51,8 +57,50 @@ body {
 }
 
 .boton_añadir_tarea {
-  width: 10%;
-  border-radius: 100%;
+  border-radius: 50%;
   font-size: 18px;
 
+}
+
+.boton_ordenar_tareas{
+  background-color: var(--light);
+  border: var(--dark);
+  border-radius: 20px;
+  padding-left: 10px;
+  
+
+}
+
+input {
+  border: var(--dark);
+  border-radius: 20px;
+  padding-left: 10px;
+  
+}
+
+form {
+  margin: 20px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 30px auto;
+  grid-column-gap: 15px;
+}
+
+
+
+.tarea {
+  padding: 4px;
+  margin-top: 15px;
+  max-width: 70vh;
+  min-width: 10vh;
+  color: var(--light);
+  cursor: pointer;
+  background-color: #FF5ACD;
+  border-radius: 10px;
+}
+
+.hecho {
+  background-color: var(--disabled);
+  text-decoration: line-through;
+  color: var(--dark);
 }
